@@ -19,11 +19,11 @@ export default class AdoptionsPage extends React.Component {
     const animalReq = PetfulApi.fetchAnimals();
 
     const [users, animals] = await Promise.all([userReq, animalReq])
-    
+
     const intervalId = setInterval(() => {
       this.adopt('dog');
     }, 10000)
-    
+
     this.setState({
       users,
       dog: animals.dog,
@@ -35,7 +35,7 @@ export default class AdoptionsPage extends React.Component {
   async componentDidUpdate(prevProps, prevState) {
     if (prevState.users.length !== 0 && this.state.users.length === 0) {
       const newUsers = await PetfulApi.refreshUsers();
-      this.setState({users: newUsers})
+      this.setState({ users: newUsers })
     }
   }
 
@@ -47,25 +47,25 @@ export default class AdoptionsPage extends React.Component {
       recentlyAdopted: [response, ...this.state.recentlyAdopted],
       [animal]: newAnimal[animal],
       users: this.state.users.slice(1),
-      counter: this.state.counter+1
+      counter: this.state.counter + 1
     }, this.cancelInterval)
   }
 
   cancelInterval = () => {
-    const {counter} = this.state;
+    const { counter } = this.state;
     if (counter >= 4) {
       clearInterval(this.state.intervalId)
     }
   }
 
   avatar(email) {
-    return gravatar.url(email, {s: '100', r: 'x', d: 'retro', protocol: 'https'}, true);
+    return gravatar.url(email, { s: '100', r: 'x', d: 'retro', protocol: 'https' }, true);
   }
 
   renderUsers = (users) => {
     return users.map((user, i) => {
       return <div className='user' key={i}>
-        <img src={this.avatar(user.email)} alt='user-profile-img'/>
+        <img src={this.avatar(user.email)} alt='user-profile-img' />
         <h4>{user.full_name}</h4>
       </div>
     })
@@ -88,12 +88,12 @@ export default class AdoptionsPage extends React.Component {
           <p>{result.user.full_name} adopted {result.animal.name}</p>
         </div>
       })
-      
+
     )
   }
 
   render() {
-    const {users, dog, cat} = this.state;
+    const { users, dog, cat } = this.state;
 
     return (
       <section className='adoptions-page'>
@@ -117,8 +117,10 @@ export default class AdoptionsPage extends React.Component {
         </div>
 
         <div className='recently-adopted'>
-          <h2>Recently Adopted</h2>
-          {this.renderRecentlyAdopted()}
+            <h2>Recently Adopted</h2>
+          <div className='wrapped-adopted'>
+            {this.renderRecentlyAdopted()}
+          </div>
         </div>
       </section>
     )

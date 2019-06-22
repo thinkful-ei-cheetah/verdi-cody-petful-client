@@ -1,5 +1,5 @@
 header {
-  background: var(--primary);
+  background: var(--grey);
   padding: 30px;
   font-size: 30px;
   font-weight: bold;
@@ -12,8 +12,7 @@ nav a {
 }
 
 main {
-  max-width: 1000px;
-  margin: 30px 10px;
+  background-attachment: var(--green);
   padding: 10px;
   display: flex;
   justify-content: center;

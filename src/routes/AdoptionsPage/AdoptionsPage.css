@@ -1,14 +1,25 @@
 .adoptions-page {
   display: flex;
   width: 100%;
+  background-color:var(--green);
 }
 
 .users, .recently-adopted{
   flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
 }
-
+.user{
+  margin-top:20px;
+  margin-left:10px;
+}
+.user img{
+  border-radius: 4px;
+}
 .animals {
-  flex: 2;
+  flex: 3;
 }
 
 .animal-wrapper {
@@ -16,6 +27,20 @@
 }
 
 .responsive {
-  width: 50%;
-  height: auto;
+    width: 247px;
+    height: 260px;
+    border-radius: 4px;
+}
+
+.dog-queue{
+  margin:20px;
+}
+.cat-queue{
+  margin:20px 50px;
+}
+
+.wrapped-adopted{
+  height: 100%;
+    display: flex;
+    flex-direction: column;
 }
