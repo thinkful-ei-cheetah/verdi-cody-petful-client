@@ -22,7 +22,7 @@ export default class AdoptionsPage extends React.Component {
 
     const intervalId = setInterval(() => {
       this.adopt('dog');
-    }, 10000)
+    }, 5000)
 
     this.setState({
       users,
