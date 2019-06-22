@@ -1,0 +1,21 @@
+.adoptions-page {
+  display: flex;
+  width: 100%;
+}
+
+.users, .recently-adopted{
+  flex: 1;
+}
+
+.animals {
+  flex: 2;
+}
+
+.animal-wrapper {
+  display: flex;
+}
+
+.responsive {
+  width: 50%;
+  height: auto;
+}

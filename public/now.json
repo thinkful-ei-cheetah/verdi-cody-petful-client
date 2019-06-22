@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "name": "petful",
+  "alias": "petful",
+  "build": {
+    "env": {
+      "REACT_APP_API_BASE": "https://verdi-petful-api.herokuapp.com/api"
+    }
+  },
+  "routes": [
+      {
+        "src": "^/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": "^/manifest.json$",
+        "dest": "/manifest.json"
+      },
+      {
+        "src": "^\/(.*\\.(png|ico|jpg|xml))$",
+        "dest": "/public/$1"
+      },
+      {
+        "src": ".*",
+        "dest": "/index.html"
+      }
+  ]
+}

@@ -1,0 +1,20 @@
+header {
+  background: var(--primary);
+  padding: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  max-width: 1000px;
+  margin: 30px 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
