@@ -6,10 +6,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background:var(--green)
+  background:var(--green);
+  height: 1000px;
   
 }
-
+#root{
+  height: 100%;
+}
 :root {
   --primary: #0984e3;
   --white: #ffffff;

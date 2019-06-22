@@ -1,0 +1,28 @@
+
+.home-page{
+    margin: auto;
+    display: flex;
+    width: 45%;
+    height: 65%;
+}
+#js-user-form{
+    display: flex;
+    margin: 30px;
+    flex-direction: column;
+    background-color:var(--grey);
+    width:100%;
+    justify-content: center;
+}
+.form-group {
+    margin: 19px auto 20px auto;
+    width: 78%;
+}
+label{
+    font-size: 26px;
+    margin: 20px 0;
+}
+input{
+    width: 60%;
+    padding: 7px;
+    border-radius: 3px;
+}
