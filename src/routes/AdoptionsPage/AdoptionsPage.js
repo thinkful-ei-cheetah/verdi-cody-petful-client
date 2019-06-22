@@ -92,6 +92,16 @@ export default class AdoptionsPage extends React.Component {
     )
   }
 
+  allowedToAdopt = () => {
+    const userObj = localStorage.getItem('petful-user');
+    const full_name = JSON.parse(userObj).full_name;
+
+    if (this.state.users.length) {
+      return this.state.users[0].full_name !== full_name
+    }
+    return false;
+  }
+
   render() {
     const { users, dog, cat } = this.state;
 
@@ -107,11 +117,11 @@ export default class AdoptionsPage extends React.Component {
           <div className='animal-wrapper'>
             <div className='dog-queue'>
               {this.renderAnimal(dog)}
-              <button className='button primary' onClick={() => this.adopt('dog')}>Adopt Me!</button>
+              <button className='button primary' onClick={() => this.adopt('dog')} disabled={this.allowedToAdopt()}>Adopt Me!</button>
             </div>
             <div className='cat-queue'>
               {this.renderAnimal(cat)}
-              <button className='button primary' onClick={() => this.adopt('cat')}>Adopt Me!</button>
+              <button className='button primary' onClick={() => this.adopt('cat')} disabled={this.allowedToAdopt()}>Adopt Me!</button>
             </div>
           </div>
         </div>
