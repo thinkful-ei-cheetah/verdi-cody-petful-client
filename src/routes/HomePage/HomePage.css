@@ -2,8 +2,6 @@
 .home-page{
     margin: auto;
     display: flex;
-    width: 45%;
-    height: 65%;
 }
 #js-user-form{
     display: flex;
@@ -14,9 +12,14 @@
     justify-content: center;
 }
 .form-group {
-    margin: 19px auto 20px auto;
-    width: 78%;
+    text-align:center;
 }
+
+.form-group.cta{
+  margin-top: 20px;
+  padding: 15px;
+}
+
 label{
     font-size: 26px;
     margin: 20px 0;

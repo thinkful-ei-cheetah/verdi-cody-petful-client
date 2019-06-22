@@ -1,7 +1,11 @@
 .adoptions-page {
   display: flex;
   width: 100%;
-  background-color:var(--green);
+  background-color:var(--white);
+}
+
+.users > h2 {
+  margin-left: 10px;
 }
 
 .users, .recently-adopted{
@@ -18,8 +22,17 @@
 .user img{
   border-radius: 4px;
 }
+
+.user.active img {
+  border: 5px solid var(--primary);
+}
+
 .animals {
   flex: 3;
+}
+
+.animals > h2 {
+  margin-left: 18px;
 }
 
 .animal-wrapper {

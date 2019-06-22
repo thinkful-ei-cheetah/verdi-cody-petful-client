@@ -64,7 +64,7 @@ export default class AdoptionsPage extends React.Component {
 
   renderUsers = (users) => {
     return users.map((user, i) => {
-      return <div className='user' key={i}>
+      return <div className={(i === 0 ? 'user active' : 'user')} key={i}>
         <img src={this.avatar(user.email)} alt='user-profile-img' />
         <h4>{user.full_name}</h4>
       </div>

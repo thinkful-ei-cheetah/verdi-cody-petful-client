@@ -37,8 +37,8 @@ export default class HomePage extends React.Component {
             <input type='text' name='zipcode' id='zipcode' required/>  
           </div>
 
-          <div className='form-group'>
-            <button type='submit' className='button primary'>Show Me The Animals</button>
+          <div className='form-group cta'>
+            <button type='submit' className='button primary full'>Show Me The Animals</button>
           </div>
         </form>
       </section>
