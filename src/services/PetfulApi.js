@@ -52,6 +52,14 @@ const PetfulApi = {
     return res.json();
   },
 
+  async refreshUsers() {
+    const res = await fetch(`${config.REACT_APP_API_BASE}/users/refresh`)
+    if (!res.ok) {
+      res.json().then(e => Promise.reject(e))
+    }
+    return res.json();
+  },
+
 
 }
 

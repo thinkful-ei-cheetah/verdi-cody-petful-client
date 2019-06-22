@@ -32,6 +32,13 @@ export default class AdoptionsPage extends React.Component {
     })
   }
 
+  async componentDidUpdate(prevProps, prevState) {
+    if (prevState.users.length !== 0 && this.state.users.length === 0) {
+      const newUsers = await PetfulApi.refreshUsers();
+      this.setState({users: newUsers})
+    }
+  }
+
   adopt = async (animal) => {
     const response = await PetfulApi.adopt(animal)
     const newAnimal = await PetfulApi.fetchAnimal(animal)
