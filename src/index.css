@@ -6,7 +6,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background:var(--green);
   height: 1000px;
   
 }
@@ -16,8 +15,9 @@ body {
 :root {
   --primary: #0984e3;
   --white: #ffffff;
-  --grey: #696773;
+  --grey: #b2bec3;
   --green:#034748;
+  --header: #6c5ce7;
   
 }
 
@@ -45,5 +45,10 @@ label {
 }
 
 .button.primary {
-  background: var(--primary)
+  background-color: var(--primary)
+}
+
+button:disabled {
+  background-color: grey !important;
+  cursor: not-allowed
 }
