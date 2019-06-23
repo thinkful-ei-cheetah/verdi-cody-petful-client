@@ -21,6 +21,14 @@ export default class HomePage extends React.Component {
   render() {
     return (
       <section className='home-page'>
+        <div className='intro'>
+          <h2> Welcome to AdoptMe! <span role='img' aria-label='emoji'>🐶</span></h2>
+          <p>Complete the form to see nearby animals available for adoptation.  AdoptMe! uses the PetFinder Api to pull real listings in your area. Users are added to a queue a must wait until it's their turn before selecting either cat or dog for adoptation.</p>
+
+          <p>
+            There is no browsing of animals at AdoptMe! Animals that have been with us the longest are the only aniamls available for adoptation.  In this way, we make sure every animals gets a deserving home.
+          </p>
+        </div>
         <form action='#' id='js-user-form' onSubmit={(e) => this.handleSubmit(e)}>
           <div className='form-group'>
             <label htmlFor='full_name'>Full Name</label>
