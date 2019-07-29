@@ -1,19 +1,21 @@
-# Petful
-PetFul was created by 
-Cody Gillette and Michael Verdi 
-for a pet adoption app.
+# AdoptMe! Client App
 
+AdoptMe! is a first come first serve pet adoptation app. Users create an account which includes their zipcode and nearby cats and dogs are populated that are in need of a good home. Adoptation listings are pulled from the PetFinder Api. Users are only able to select either the next up cat or dog... no browsing of aniamls!
 
-# Intro 
-This application alows users to fill out a form to start adopting the new pet of there dreams!
-Once you sign in you will be placed into a queue and wait your turn to chose the newest member of you family.
+## Details
 
- # live link
- https://petful.cgillette12.now.sh/
- https://github.com/thinkful-ei-cheetah/verdi-cody-petful-server
- https://github.com/thinkful-ei-cheetah/verdi-cody-petful-client
+* The live app can be found at: [https://petful.verdi327.now.sh](https://petful.verdi327.now.sh)
 
-# Tech stack
-React, JSX, HTML5, CSS3  
+* Client Repo: [https://github.com/thinkful-ei-cheetah/verdi-cody-petful-client](https://github.com/thinkful-ei-cheetah/verdi-cody-petful-client)
 
+* Server Repo: [https://github.com/thinkful-ei-cheetah/verdi-cody-petful-server](https://github.com/thinkful-ei-cheetah/verdi-cody-petful-server)
 
+* Pair: Cody Gilette
+
+## Technology
+
+* React
+* Node & Express
+* HTML5
+* CSS3
+* [PetFinder Api](https://www.petfinder.com/developers/)

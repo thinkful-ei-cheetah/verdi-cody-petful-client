@@ -12,6 +12,7 @@ body {
 #root{
   height: 100%;
 }
+
 :root {
   --primary: #0984e3;
   --white: #ffffff;
